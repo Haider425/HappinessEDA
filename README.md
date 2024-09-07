@@ -70,6 +70,7 @@ To run this analysis, you need the following Python libraries:
 
 ```bash
 pip install pandas numpy matplotlib seaborn
+```
 
 
 ## How to Run
