@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Final Assignment</title>
+  <!-- <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="cell markdown">
+<div class="title">CSCI2000U Scientific Data Analysis World Happiness Report</div>
+<hr />
+<p><strong>Name:</strong> Haider Saleem<br />
+<hr />
+<h3
+id="exploration-of-the-2019-world-happiness-report-dataset">Exploration
+of the 2019 World Happiness Report Dataset</h3>
+<h4 id="introduction">Introduction</h4>
+<p>In this exploration of the 2019 World Happiness Report dataset, I
+delved into key questions to unravel insights about global happiness and
+its relationship with economic indicators. The dataset, obtained from
+the Kaggle source <a
+href="https://www.kaggle.com/datasets/unsdsn/world-happiness/">World
+Happiness Report Dataset</a>, encompasses information for 156 countries
+and includes metrics such as "Happiness Score" and "GDP per capita."</p>
+<h5 id="why-this-data">Why This Data:</h5>
+<p>I chose this dataset to understand what makes people happy worldwide.
+It goes beyond just money, looking at things like social support,
+health, and freedom. This data helps explore the real factors that
+contribute to the happiness of different countries.</p>
+<h3 id="key-questions">Key Questions:</h3>
+<h5 id="1-where-are-the-happiest-countries"><u>1. Where are the Happiest
+Countries?</u></h5>
+<p>I aimed to identify the happiest countries by analyzing the
+"Happiness Score." This involved pinpointing locations where people
+report the highest levels of happiness.</p>
+<h5 id="2-finding-happiness-patterns"><u>2. Finding Happiness
+Patterns:</u></h5>
+<p>I explored recurring patterns in happiness levels across countries.
+The goal was to uncover common threads in what makes people happy in
+different places.</p>
+<h5 id="3-does-money-buy-happiness"><u>3. Does Money Buy
+Happiness?</u></h5>
+<p>I investigated the correlation between happiness and GDP per capita.
+The question here was whether a country's wealth, as indicated by GDP
+per capita, correlates with the happiness of its people.</p>
+<hr />
+</div>
+<section id="analysis" class="cell markdown">
+<h3>Analysis</h3>
+</section>
+<div class="cell markdown">
+<p><strong>Importing the libraries</strong></p>
+<p>Here, I imported the libraries that I used for the analysis. I used
+the <code>pandas</code> library to read the dataset and perform data
+manipulation. I used the <code>matplotlib</code> library to create
+visualizations and the <code>seaborn</code> library to create a
+heatmap.</p>
+<p>```python</p>
+</div>
+<div class="cell code" data-execution_count="8">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd  <span class="co"># import pandas library</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns  <span class="co"># Import the Seaborn library</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt  <span class="co"># Import the Matplotlib library</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np  <span class="co"># Import the Numpy library</span></span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p><strong>Importing the Dataset</strong></p>
+<p>Here i read the csv file then loaded the dataset into a variable
+called <code>"happiness_data"</code>.</p>
+</div>
+<div class="cell code" data-execution_count="9">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>happiness_data <span class="op">=</span> pd.read_csv(<span class="st">&#39;2019.csv&#39;</span>)  <span class="co"># read the csv file</span></span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p><strong>Printing the Dataset</strong></p>
+<p>Here i printed the dataset to see how many columns and rows are in
+the dataset and i also printed the first 5 and last 5 rows of the
+dataset.</p>
+<p>```python</p>
+</div>
+<div class="cell code" data-execution_count="10">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(happiness_data.shape)  <span class="co"># shows the number of rows and columns in the dataset</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>happiness_data  <span class="co">#  shows the first 5 and last 5 rows of the dataset</span></span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>(156, 9)
+</code></pre>
+</div>
+<div class="output execute_result" data-execution_count="10">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall rank</th>
+      <th>Country or region</th>
+      <th>Score</th>
+      <th>GDP per capita</th>
+      <th>Social support</th>
+      <th>Healthy life expectancy</th>
+      <th>Freedom to make life choices</th>
+      <th>Generosity</th>
+      <th>Perceptions of corruption</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Finland</td>
+      <td>7.769</td>
+      <td>1.340</td>
+      <td>1.587</td>
+      <td>0.986</td>
+      <td>0.596</td>
+      <td>0.153</td>
+      <td>0.393</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Denmark</td>
+      <td>7.600</td>
+      <td>1.383</td>
+      <td>1.573</td>
+      <td>0.996</td>
+      <td>0.592</td>
+      <td>0.252</td>
+      <td>0.410</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Norway</td>
+      <td>7.554</td>
+      <td>1.488</td>
+      <td>1.582</td>
+      <td>1.028</td>
+      <td>0.603</td>
+      <td>0.271</td>
+      <td>0.341</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Iceland</td>
+      <td>7.494</td>
+      <td>1.380</td>
+      <td>1.624</td>
+      <td>1.026</td>
+      <td>0.591</td>
+      <td>0.354</td>
+      <td>0.118</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Netherlands</td>
+      <td>7.488</td>
+      <td>1.396</td>
+      <td>1.522</td>
+      <td>0.999</td>
+      <td>0.557</td>
+      <td>0.322</td>
+      <td>0.298</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>151</th>
+      <td>152</td>
+      <td>Rwanda</td>
+      <td>3.334</td>
+      <td>0.359</td>
+      <td>0.711</td>
+      <td>0.614</td>
+      <td>0.555</td>
+      <td>0.217</td>
+      <td>0.411</td>
+    </tr>
+    <tr>
+      <th>152</th>
+      <td>153</td>
+      <td>Tanzania</td>
+      <td>3.231</td>
+      <td>0.476</td>
+      <td>0.885</td>
+      <td>0.499</td>
+      <td>0.417</td>
+      <td>0.276</td>
+      <td>0.147</td>
+    </tr>
+    <tr>
+      <th>153</th>
+      <td>154</td>
+      <td>Afghanistan</td>
+      <td>3.203</td>
+      <td>0.350</td>
+      <td>0.517</td>
+      <td>0.361</td>
+      <td>0.000</td>
+      <td>0.158</td>
+      <td>0.025</td>
+    </tr>
+    <tr>
+      <th>154</th>
+      <td>155</td>
+      <td>Central African Republic</td>
+      <td>3.083</td>
+      <td>0.026</td>
+      <td>0.000</td>
+      <td>0.105</td>
+      <td>0.225</td>
+      <td>0.235</td>
+      <td>0.035</td>
+    </tr>
+    <tr>
+      <th>155</th>
+      <td>156</td>
+      <td>South Sudan</td>
+      <td>2.853</td>
+      <td>0.306</td>
+      <td>0.575</td>
+      <td>0.295</td>
+      <td>0.010</td>
+      <td>0.202</td>
+      <td>0.091</td>
+    </tr>
+  </tbody>
+</table>
+<p>156 rows × 9 columns</p>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p><strong>Data Cleaning</strong></p>
+<p>Here i checked for any missing values in the dataset and i also
+checked for any <code>duplicate rows</code> in the dataset. I also
+dropped some columns because they were not needed for the analysis and
+the graphs. I also renamed some columns to make it easier to understand.
+and lastly printed the dataset head to see if the changes were made.</p>
+<p>```python</p>
+</div>
+<div class="cell code" data-execution_count="11">
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>happiness_data <span class="op">=</span> happiness_data.drop_duplicates()  <span class="co"># drop duplicates </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>happiness_data.drop([<span class="st">&#39;Generosity&#39;</span>, <span class="st">&#39;Perceptions of corruption&#39;</span>, <span class="st">&#39;Social support&#39;</span>, <span class="st">&#39;Freedom to make life choices&#39;</span>, <span class="st">&#39;Healthy life expectancy&#39;</span>], axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)  <span class="co"># drop columns</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>happiness_data.rename(columns<span class="op">=</span>{<span class="st">&#39;Country or region&#39;</span>: <span class="st">&#39;Country&#39;</span>, <span class="st">&#39;Score&#39;</span>: <span class="st">&#39;Happiness Score&#39;</span>, <span class="st">&#39;GDP per capita&#39;</span>: <span class="st">&#39;GDP PerCapita&#39;</span>}, inplace<span class="op">=</span><span class="va">True</span>)  <span class="co"># rename columns</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>happiness_data.head()  <span class="co"># show first 5 rows</span></span></code></pre></div>
+<div class="output execute_result" data-execution_count="11">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall rank</th>
+      <th>Country</th>
+      <th>Happiness Score</th>
+      <th>GDP PerCapita</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Finland</td>
+      <td>7.769</td>
+      <td>1.340</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Denmark</td>
+      <td>7.600</td>
+      <td>1.383</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Norway</td>
+      <td>7.554</td>
+      <td>1.488</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Iceland</td>
+      <td>7.494</td>
+      <td>1.380</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Netherlands</td>
+      <td>7.488</td>
+      <td>1.396</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p><strong>Data description</strong></p>
+<p>Here i printed the data description to see the mean, standard
+deviation, min, max, and the quartiles of the dataset. with these values
+i can see the range of the data and the spread of the data.</p>
+<p>```python</p>
+</div>
+<div class="cell code" data-execution_count="12">
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>happiness_data.describe().<span class="bu">round</span>(<span class="dv">3</span>)  <span class="co"># summary statistics</span></span></code></pre></div>
+<div class="output execute_result" data-execution_count="12">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall rank</th>
+      <th>Happiness Score</th>
+      <th>GDP PerCapita</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>156.000</td>
+      <td>156.000</td>
+      <td>156.000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>78.500</td>
+      <td>5.407</td>
+      <td>0.905</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>45.177</td>
+      <td>1.113</td>
+      <td>0.398</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000</td>
+      <td>2.853</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>39.750</td>
+      <td>4.544</td>
+      <td>0.603</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>78.500</td>
+      <td>5.380</td>
+      <td>0.960</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>117.250</td>
+      <td>6.184</td>
+      <td>1.233</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>156.000</td>
+      <td>7.769</td>
+      <td>1.684</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p><strong>Data Visualization</strong></p>
+<p>This code uses <code>Seaborn</code> and <code>Matplotlib</code> to
+create a bar plot showing the happiness scores of the top ten countries
+from a dataset. It identifies the top countries, filters the data, and
+then plots the scores with country names on the x-axis and happiness
+scores on the y-axis.</p>
+<p>```python</p>
+</div>
+<div class="cell code" data-execution_count="13">
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># top ten countries by happiness score </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>happiness_top_ten <span class="op">=</span> happiness_data.nlargest(<span class="dv">10</span>, <span class="st">&#39;Happiness Score&#39;</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># bar plot </span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">6</span>))</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span><span class="st">&#39;Country&#39;</span>, y<span class="op">=</span><span class="st">&#39;Happiness Score&#39;</span>, data<span class="op">=</span>happiness_top_ten, palette<span class="op">=</span><span class="st">&#39;viridis&#39;</span> )</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># title and labels</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Happiness Score by Country (Top Ten Countries)&#39;</span>)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Country&#39;</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Happiness Score&#39;</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>plt.yticks(np.arange(<span class="dv">0</span>, <span class="fl">8.5</span>, <span class="fl">0.5</span>)) <span class="co"># goes from 0 to 8 in increments of 0.5</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>plt.show() <span class="co"># show the plot</span></span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="images/Graph1.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p><strong>Data Visualization with line plot</strong></p>
+<p>This code generates a combined bar plot and line plot to compare the
+happiness scores and GDP per capita of the top 25 countries from the
+given dataset. It first identifies the top 25 countries based on their
+happiness scores and then filters the dataset accordingly. The
+<code>bar plot</code>, representing happiness scores, while the line
+plot is overlaid using a secondary y-axis in red with circular markers.
+The code offers a clear visual insight into the relationship between
+happiness scores and GDP per capita for the top 25 countries.</p>
+<p>```python</p>
+</div>
+<div class="cell code" data-execution_count="14">
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#top 25 countries and their happiness score.</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>top_25_countries <span class="op">=</span> happiness_data.nlargest(<span class="dv">25</span>, <span class="st">&#39;Happiness Score&#39;</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># bar plot</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">35</span>, <span class="dv">10</span>))  </span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span><span class="st">&#39;Country&#39;</span>, y<span class="op">=</span><span class="st">&#39;Happiness Score&#39;</span>, data<span class="op">=</span>top_25_countries, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, label<span class="op">=</span><span class="st">&#39;Happiness Score&#39;</span>,)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>plt.yticks(np.arange(<span class="dv">0</span>, <span class="fl">8.5</span>, <span class="fl">0.5</span>))</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># GDP Per Capita Plot</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> plt.gca().twinx()</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>sns.lineplot(</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">&#39;Country&#39;</span>, </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">&#39;GDP PerCapita&#39;</span>, </span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>top_25_countries,</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">&#39;red&#39;</span>,  </span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">&#39;o&#39;</span>,  </span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    markersize<span class="op">=</span><span class="dv">10</span>, </span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">&#39;GDP Per Capita&#39;</span>,</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span>ax2</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co">#title and labels</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Comparison of Happiness Score and GDP Per Capita for Top 25 Countries&#39;</span>)</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Country&#39;</span>)</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">&#39;upper left&#39;</span>)</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Happiness Score&#39;</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>)</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">&#39;GDP Per Capita&#39;</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>)</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="images/Graph2.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>Here i compared the top 10 and last 10 countries with their GDP
+perCapita and Happiness Score. I used a <code>bar plot</code> to show
+the data. I also used a <code>line plot</code> to show the relationship
+between the GDP perCapita and Happiness Score.</p>
+<p>```python</p>
+</div>
+<div class="cell code" data-execution_count="15">
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the top ten and last ten countries based on Happiness Score</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>top_countries <span class="op">=</span> happiness_data.nlargest(<span class="dv">10</span>, <span class="st">&#39;Happiness Score&#39;</span>)[<span class="st">&#39;Country&#39;</span>]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>last_countries <span class="op">=</span> happiness_data.nsmallest(<span class="dv">10</span>, <span class="st">&#39;Happiness Score&#39;</span>)[<span class="st">&#39;Country&#39;</span>]</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>top_and_last_countries <span class="op">=</span> pd.concat([top_countries, last_countries])</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>happiness_top_and_last <span class="op">=</span> happiness_data[happiness_data[<span class="st">&#39;Country&#39;</span>].isin(top_and_last_countries)]</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#bar plot</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">25</span>, <span class="dv">8</span>)) </span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>sns.barplot(</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">&#39;Country&#39;</span>, </span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">&#39;Happiness Score&#39;</span>, </span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>happiness_top_and_last, </span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>,  </span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">&#39;Happiness Score&#39;</span>,</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>plt.yticks(np.arange(<span class="dv">0</span>, <span class="fl">8.5</span>, <span class="fl">0.5</span>))</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot GDP Per Capita </span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> plt.gca().twinx()</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>sns.lineplot(</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">&#39;Country&#39;</span>, </span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">&#39;GDP PerCapita&#39;</span>, </span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>happiness_top_and_last, </span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">&#39;red&#39;</span>,  </span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">&#39;o&#39;</span>, </span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    markersize<span class="op">=</span><span class="dv">10</span>, </span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">&#39;GDP Per Capita&#39;</span>,</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span>ax2</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="co">#title and labels</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Comparison of Happiness Score and GDP Per Capita for Top and Last 10 Countries&#39;</span>)</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Country&#39;</span>)</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">&#39;upper left&#39;</span>)</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Happiness Score&#39;</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>)</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">&#39;GDP Per Capita&#39;</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>)</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="images/Graph3.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>Here i displayed all of the countries using a barplot relative to
+their happiness score. I also used a line plot to show the relationship
+between the GDP perCapita and Happiness Score.</p>
+<p>```python</p>
+</div>
+<div class="cell code" data-execution_count="16">
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar plot for all countries</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">25</span>, <span class="dv">8</span>))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span><span class="st">&#39;Country&#39;</span>, y<span class="op">=</span><span class="st">&#39;Happiness Score&#39;</span>, data<span class="op">=</span>happiness_data, color<span class="op">=</span><span class="st">&#39;lightblue&#39;</span>, label<span class="op">=</span><span class="st">&#39;Happiness Score&#39;</span>,)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">90</span>)  <span class="co"># Rotate x-axis labels for better readability</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>plt.yticks(np.arange(<span class="dv">0</span>, <span class="fl">8.5</span>, <span class="fl">0.5</span>))</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Title and labels</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Happiness Score by Country (All Countries)&#39;</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Country&#39;</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Happiness Score&#39;</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> plt.gca().twinx()</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>sns.lineplot(</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">&#39;Country&#39;</span>, </span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">&#39;GDP PerCapita&#39;</span>, </span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>happiness_data, </span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">&#39;red&#39;</span>,  </span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">&#39;GDP Per Capita&#39;</span>,</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span>ax2</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="images/Graph4.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p><strong>Discussion</strong></p>
+<p>The analysis of the 2019 World Happiness Report dataset revealed some
+interesting insights. Initially, attention was drawn to the top 10
+countries exhibiting the highest happiness scores. Among them, Finland
+claimed the top spot with an impressive score of 7.769, along with
+Denmark, Norway, Iceland, Netherlands, Switzerland, Sweden, New Zealand,
+Canada, and Austria. A deeper exploration of the dataset included
+investigating the connection between happiness scores and GDP per capita
+among the top 25 countries. Surprisingly, all these nations showed
+happiness scores of 7.0 or higher, alongside a solid GDP per capita of
+1.0 or above. This combination of high happiness scores and economic
+strength within the top 25 countries emphasized a significant
+pattern.</p>
+<p>A crucial part of the analysis involved looking closely at the top 10
+and bottom 10 countries. This investigation underscored a considerable
+difference, showing that the top 10 countries had a much higher average
+GDP per capita at 1.4, while the bottom 10 countries had a lower average
+of 0.3. This economic difference aligned with happiness scores, as the
+top 10 countries had a higher happiness score of 7.2, while the bottom
+10 countries fell behind at 4.3. In conclusion, the visualizations
+strongly suggested a positive correlation between GDP per capita and
+happiness scores. The findings indicated that countries with higher
+economic prosperity, reflected in superior GDP per capita, tended to
+report higher happiness scores. Therefore, the analysis strongly backed
+the idea that, worldwide, having good financial well-being significantly
+contributes to overall happiness. This helps us understand how money and
+happiness are connected worldwide, giving us important ideas to think
+about.</p>
+</div>
+<div class="cell markdown">
+<p><strong>Rerferences</strong></p>
+<ol>
+<li><a href="https://www.kaggle.com/unsdsn/world-happiness"
+class="uri">https://www.kaggle.com/unsdsn/world-happiness</a></li>
+</ol>
+</div>
+</body>
+</html>
